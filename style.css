@@ -2,6 +2,7 @@
 
 :root {
     --primary-text-color: #000000;
+    --secondary-text-color: #4b4b4b;
     --primary-color: #FFFFFF;
     --secondary-color: #E7E7E7;
     --primary-background-color: #3380C3;
@@ -23,57 +24,151 @@
 }
 
 /* HTML Sections */
-nav {
+header {
     background-color: var(--primary-background-color);
-    padding: 2.5%;
+    padding: 5%;
+    text-align: center;
 }
-nav ul {
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: space-around;
+nav {
+    line-height: 2.5em;
+    font-size: 20px;
 }
-nav li {
-    list-style-type: none;
+nav a {
+    display: block;  
+    white-space: nowrap;  
 }
-nav li a{
+h1 {
+    font-size: 50px;
+}
+h2 {
+    font-size: 30px;
+}
+li {
+    padding: 2% 0%;
+}
+/* HTML Elements */
+a:link {
+    color: var(--primary-button-color);
     text-decoration: none;
 }
-nav li a:link, nav li a:visited {
-    color: var(--primary-color);
+a:hover{
+    color: var(--secondary-button-color);
 }
-nav li a:hover {
-    color: var(--primary-button-color);
-}
-
-/* HTML Elements */
-h1 {
-    padding: 5%;
-}
-
 /* Classes */
-.image {
+.logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+.logo-size {
+    width: 10em;
+    height: 10em;
+}
+.home-body-text {
+    padding: 10%;
+    line-height: 2;
+}
+.breadcrumb {
+    padding: 5% 5% 0%;
+    font-size: 25px;
+}
+.wrap-topics {
+    margin: 2% 0%;
+    padding: 0% 5%;
+}
+.bullet-desc{
+    padding: 5% 10% 0%;
+}
+
+/* IDs */
+#home {
+    margin: 0;
+    display: grid;
+    grid-template-columns: 320px 1fr;
+    gap: 40px;
+}
+/* Sub-Page IDs */
+#raspberry {
+    color: var(--secondary-background-color);
+}
+#raspberry iframe {
     width: 100%;
-    height: 200px;
-    object-fit: cover;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    margin: 5% 0%;
 }
-.body-text {
-    padding: 5%;
+#sensors {
+    color: var(--secondary-background-color);
+    padding-top: 5%;
 }
-.mini-nav {
-    padding: 0% 0% 5% 0%;
+
+/* Sub-Page Columns */
+.row {
+    display: flex;
+    flex-wrap: nowrap;
+    margin: 5% 0%;
 }
-.sub-section {
+
+.column {
+    overflow: hidden;
+    padding: 0% 5%;
+}
+
+.left {
+    width: 25%;
+    min-width: 175px;
+    border-right: 1px solid var(--primary-text-color);
+}
+
+.right {
+    flex-grow: 1;
+    width: 75%;
+}
+
+/* Buttons */
+.button-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+    padding: 5% 5% 5% 0%;
+}
+.button-grid a:link {
+    color: var(--primary-text-color);
+}
+.button-grid a:hover {
+    color: var(--secondary-text-color);
+}
+
+/* Home Nav Buttons */
+  .button {
     display: flex;
     flex-direction: column;
-    gap: 50px;
-}
-/* IDs */
-#irrigation {
-    color: #000000;
-}
-#soil {
-    color: #000000;
-}
-#harvest {
-    color: #000000;
-}
+    justify-content: flex-end;
+    min-height: 200px;
+    border-radius: 20px;
+    padding: 20%;
+    text-decoration: none;
+    color: var(--primary-text-color);
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 4px 4px rgba(0,0,0,0.5);
+    cursor: pointer;
+    border: none;
+    text-align: left;
+  }
+
+  .button--color1  { background: var(--primary-accent-color); }
+  .button--color2   { background: var(--secondary-accent-color); }
+
+  .button-icon {
+    font-size: 2em;
+    margin-bottom: auto;
+    display: block;
+    padding-bottom: 16px;
+  }
+  
+  .button p {
+    padding: 5% 0%;
+    line-height: 1.5;
+  }
