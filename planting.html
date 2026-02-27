@@ -12,62 +12,83 @@
     <header>
         <div class="logo"><img src="/TigerMountain-SOP/assets/logo.png" class="logo-size"><h1>TigerMountain Foundation</h1></div>
     </header>
-    <nav>
-        <ul>
-            <li><a href="/TigerMountain-SOP/index.html">Home</a></li>
-            <li><a href="/TigerMountain-SOP/crops.html">Crop Information</a></li>
-            <li><a href="/TigerMountain-SOP/garden.html">Garden Guides</a></li>
-            <li><a href="/TigerMountain-SOP/planting.html">Planting Guides</a></li>
-            <li><a href="/TigerMountain-SOP/tech.html">Technology Guides</a></li>
-        </ul>
-    </nav>
     <main>
-        <div class="body-text">
-            <h2>Planting Guides</h2>
-            <div class="mini-nav">
-                <a href="#irrigation">Irrigation</a><br>
-                <a href="#soil">Soil</a><br>
-                <a href="#havest">Harvest</a>
-            </div>
-            <div class="sub-section">
-                <div id="irrigation">
-                    <h4>Irrigation Section</h4> 
-                        <p>This is how you irrigate. </p>
-                        <p>This is how you irrigate. </p>
-                        <p>This is how you irrigate. </p>
-                        <p>This is how you irrigate. </p>
-                        <p>This is how you irrigate. </p>
-                        <p>This is how you irrigate. </p>
-                        <p>This is how you irrigate. </p>
-                        <p>This is how you irrigate. </p>
-                </div>
-                <div id="soil">
-                    <h4>Soil Section</h4> 
-                        <p>This is how you cultivate soil. </p>
-                        <p>This is how you cultivate soil. </p>
-                        <p>This is how you cultivate soil. </p>
-                        <p>This is how you cultivate soil. </p>
-                        <p>This is how you cultivate soil. </p>
-                        <p>This is how you cultivate soil. </p>
-                        <p>This is how you cultivate soil. </p>
-                        <p>This is how you cultivate soil. </p>
-                </div>
-                <div id="harvest">
-                    <h4>Harvest Section</h4> 
-                        <p>This is how you harvest plants. </p>
-                        <p>This is how you harvest plants. </p>
-                        <p>This is how you harvest plants. </p>
-                        <p>This is how you harvest plants. </p>
-                        <p>This is how you harvest plants. </p>
-                        <p>This is how you harvest plants. </p>
-                        <p>This is how you harvest plants. </p>
-                        <p>This is how you harvest plants. </p>
-                </div>
-            </div>
+        <div class="breadcrumb">
+            <p><a href="index.html">Home</a> > Planting Guide</p>
         </div>
+
+        <div class="planting-shell">
+            <!-- Sidebar nav -->
+            <aside class="sidebar">
+                <nav>
+                    <a href="#garden-crops">Garden Crop Stats</a>
+                    <a href="#rotations">Crop Rotations</a>
+                    <a href="#irrigation">Irrigation Process</a>
+                </nav>
+            </aside>
+
+            <!-- Main Table content -->
+            <div class="content-area">
+                <!-- Crops in the Garden -->
+                <section id="garden-crops">
+                    <h2 class="section-heading">Garden Crop Stats</h2>
+                    <div class="toolbar">
+                        <div class="search-wrap">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+                            </svg>
+                            <input type="text" id="cropSearch" placeholder="Search crops…" autocomplete="off">
+                        </div>
+                        <div class="filter-pills" id="filterPills">
+                            <button class="pill active" data-filter="all">All</button>
+                            <button class="pill" data-filter="Leafy Greens">Leafy Greens</button>
+                            <button class="pill" data-filter="Vegetables">Vegetables</button>
+                        </div>
+                    </div>
+                    <div class="crop-table-wrap">
+                        <table class="crop-table" id="cropTable">
+                            <thead>
+                                <tr>
+                                    <th data-col="name">Crop Name <span class="sort-icon">↕</span></th>
+                                    <th data-col="category">Type <span class="sort-icon">↕</span></th>
+                                    <th data-col="water">Watering <span class="sort-icon">↕</span></th>
+                                    <th data-col="ph">pH <span class="sort-icon">↕</span></th>
+                                    <th data-col="sunlight">Sunlight <span class="sort-icon">↕</span></th>
+                                    <th data-col="temp">Temperature <span class="sort-icon">↕</span></th>
+                                </tr>
+                            </thead>
+                            <tbody id="cropBody"></tbody>
+                        </table>
+                        <div class="no-results" id="noResults" style="display:none;">No crops match your search.</div>
+                    </div>
+                </section>
+                <section>
+                    <br>
+                    <h2 class="section-heading" id="rotations">Crop Rotation</h2>
+                    <br>
+                        <h3>To maintain soil nutrients & reduce pests, swap the following beds with the new produce: </h3>
+                            <div class="nested-bullet">
+                                <strong>Bed A (Leafy Greens → Legumes → Root crops)</strong>
+                                    <ul class="bullet-desc">
+                                        <li><strong>Year 1:</strong> Kale, lettuce</li>
+                                        <li><strong>Year 2:</strong> Beans/peas (fix nitrogen)</li>
+                                        <li><strong>Year 3:</strong> Carrots, beets</li>
+                                    </ul>
+                                <strong>Bed B (Fruiting Crops → Herbs → Cover crop)</strong>
+                                    <ul class="bullet-desc">
+                                        <li><strong>Year 1:</strong> Tomatoes, peppers </li>
+                                        <li><strong>Year 2:</strong> Basil, cilantro</li>
+                                        <li><strong>Year 3:</strong> Cover crop (clover) for nitrogen enrichment</li>
+                                    </ul>
+                            </div>
+                </section>
+            </div><!-- /content-area -->
+        </div> <!-- Shell -->
+        </main>
     </main>
     <footer>
 
     </footer>
+    <script src="/TigerMountain-SOP/planting.js"></script>
 </body>
 </html>

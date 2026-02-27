@@ -13,9 +13,13 @@
     --secondary-button-color: #C14027;
     --primary-hover-color: #C3C2B3;
     --secondary-hover-color: #A5A5A5;
+    --border: #dde3ec;
+    --tag-bg: #f7fcee;
+    --tag-text: #3d6b1a;
+    --row-hover: #f5faee;
 }
 
-/* Basic formatting */
+/* ── Basic formatting ── */
 * {
     font-family: 'Roboto', sans-serif;
     padding: 0;
@@ -23,7 +27,7 @@
     box-sizing: border-box;
 }
 
-/* HTML Sections */
+/* ── HTML Sections ── */
 header {
     background-color: var(--primary-background-color);
     padding: 5%;
@@ -34,28 +38,26 @@ nav {
     font-size: 20px;
 }
 nav a {
-    display: block;  
-    white-space: nowrap;  
+    display: block;
+    white-space: normal;
+    line-height: 1.5;
+    margin-bottom: 25%;
 }
-h1 {
-    font-size: 50px;
-}
-h2 {
-    font-size: 30px;
-}
-li {
-    padding: 2% 0%;
-}
-/* HTML Elements */
+h1 { font-size: 50px; }
+h2 { font-size: 30px; }
+li { padding: 0% 0% 2%; }
+
+/* ── HTML Elements ── */
 a:link {
     color: var(--primary-button-color);
     text-decoration: none;
 }
-a:hover{
+a:hover {
     color: var(--secondary-button-color);
 }
-/* Classes */
-.logo{
+
+/* ── Classes ── */
+.logo {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -70,28 +72,53 @@ a:hover{
     line-height: 2;
 }
 .breadcrumb {
-    padding: 5% 5% 0%;
+    padding: 5% 3.25%;
     font-size: 25px;
 }
 .wrap-topics {
-    margin: 2% 0%;
     padding: 0% 5%;
 }
-.bullet-desc{
-    padding: 5% 10% 0%;
+.bullet-desc {
+    padding: 2% 10% 0%;
+}
+.nested-bullet {
+    padding-top: 2.5%;
+    padding-left: 5%;
+}
+.plant-stats {
+    color: var(--secondary-background-color);
 }
 
-/* IDs */
+/* ── IDs ── */
 #home {
     margin: 0;
     display: grid;
     grid-template-columns: 320px 1fr;
     gap: 40px;
 }
-/* Sub-Page IDs */
-#raspberry {
-    color: var(--secondary-background-color);
+
+/* ── Sub-Page Columns ── */
+.row {
+    display: flex;
+    align-items: flex-start;
 }
+.left {
+    width: 25%;
+    min-width: 175px;
+    padding: 0% 5%;
+    position: sticky;
+    top: 50px;
+    border-right: 1px solid var(--primary-text-color);
+    height: 100vh;
+}
+.right {
+    flex: 1;
+    padding: 1% 5%;
+}
+
+/* ── Sub-Page IDs ── */
+/* Tech Guide */
+#raspberry { color: var(--secondary-background-color); }
 #raspberry iframe {
     width: 100%;
     height: auto;
@@ -102,46 +129,31 @@ a:hover{
     color: var(--secondary-background-color);
     padding-top: 5%;
 }
+/* Garden Guide */
+#beds   { color: var(--secondary-background-color); }
+#agri   { color: var(--secondary-background-color); padding-top: 5%; }
+/* Planting Guide */
+#garden-crops { color: var(--secondary-background-color); }
+#garden-crops .nested-bullet li strong { color: var(--primary-accent-color); }
+#rotations    { color: var(--secondary-background-color); }
+#harvest      { color: var(--secondary-background-color); }
+#irrigation   { color: var(--secondary-background-color); }
+#soil-cult    { color: var(--secondary-background-color); }
 
-/* Sub-Page Columns */
-.row {
-    display: flex;
-    flex-wrap: nowrap;
-    margin: 5% 0%;
-}
+/* About Guide */
+#mission { color: var(--secondary-background-color); }
 
-.column {
-    overflow: hidden;
-    padding: 0% 5%;
-}
-
-.left {
-    width: 25%;
-    min-width: 175px;
-    border-right: 1px solid var(--primary-text-color);
-}
-
-.right {
-    flex-grow: 1;
-    width: 75%;
-}
-
-/* Buttons */
+/* ── Buttons ── */
 .button-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 25px;
     padding: 5% 5% 5% 0%;
 }
-.button-grid a:link {
-    color: var(--primary-text-color);
-}
-.button-grid a:hover {
-    color: var(--secondary-text-color);
-}
+.button-grid a:link  { color: var(--primary-text-color); }
+.button-grid a:hover { color: var(--secondary-text-color); }
 
-/* Home Nav Buttons */
-  .button {
+.button {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -156,19 +168,220 @@ a:hover{
     cursor: pointer;
     border: none;
     text-align: left;
-  }
-
-  .button--color1  { background: var(--primary-accent-color); }
-  .button--color2   { background: var(--secondary-accent-color); }
-
-  .button-icon {
+}
+.button--color1 { background: var(--primary-accent-color); }
+.button--color2 { background: var(--secondary-accent-color); }
+.button-icon {
     font-size: 2em;
     margin-bottom: auto;
     display: block;
     padding-bottom: 16px;
-  }
-  
-  .button p {
+}
+.button p {
     padding: 5% 0%;
     line-height: 1.5;
-  }
+}
+
+/* Planting Shell */
+
+.planting-shell {
+    display: flex;
+    align-items: flex-start;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 220px;
+    min-width: 180px;
+    flex-shrink: 0;
+    position: sticky;
+    top: 24px;
+    padding: 0 20px 0 28px;
+    border-right: 1px solid var(--border);
+    height: calc(100vh - 80px);
+    overflow-y: auto;
+}
+.sidebar nav {
+    font-size: 15px;
+    line-height: 1.4;
+}
+.sidebar nav a {
+    display: block;
+    margin-bottom: 18px;
+    color: var(--primary-button-color);
+    text-decoration: none;
+    white-space: normal;
+}
+.sidebar nav a:hover { color: var(--secondary-button-color); }
+
+/* Content area */
+.content-area {
+    flex: 1;
+    padding: 0% 5% 5%;
+    min-width: 0;
+}
+.content-area section{
+    color: var(--secondary-background-color);
+}
+.content-area section li strong{
+    color: var(--primary-accent-color);
+}
+
+/* Section headings */
+.section-heading {
+    font-size: 26px;
+    font-weight: 600;
+    color: var(--secondary-background-color);
+    margin: 40px 0 6px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--border);
+}
+.section-heading:first-child { margin-top: 0; }
+
+/* Toolbar: search + filter pills */
+.toolbar {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-bottom: 18px;
+    margin-top: 16px;
+}
+.search-wrap {
+    position: relative;
+    flex: 1;
+    min-width: 180px;
+}
+.search-wrap svg {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: .45;
+    pointer-events: none;
+}
+#cropSearch {
+    width: 100%;
+    padding: 9px 12px 9px 34px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    font-size: 14px;
+    outline: none;
+    transition: border-color .15s;
+}
+#cropSearch:focus { border-color: var(--primary-accent-color); }
+
+.filter-pills {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+}
+.pill {
+    padding: 6px 14px;
+    border-radius: 20px;
+    border: 1.5px solid var(--border);
+    font-size: 13px;
+    cursor: pointer;
+    transition: all .15s;
+    color: #444;
+}
+.pill:hover {
+    border-color: var(--primary-accent-color);
+    color: var(--tag-text);
+}
+.pill.active[data-filter="Leafy Greens"] {
+    background-color: var(--primary-accent-color);
+    border-color: var(--tag-text);
+}
+.pill.active[data-filter="Vegetables"] {
+    background-color: var(--primary-background-color); 
+    border-color: var(--secondary-background-color);
+}
+
+.pill[data-filter="Leafy Greens"]:hover:not(.active) {
+    border-color: var(--primary-accent-color);
+    color: var(--primary-accent-color);
+}
+.pill[data-filter="Vegetables"]:hover:not(.active) {
+    border-color: var(--primary-background-color); 
+    color: var(--primary-background-color); 
+}
+
+.tag-leafy-greens {
+    background-color: var(--row-hover);
+    color: #2e7d32;         
+}
+
+.tag-vegetables {
+    background-color: var(--secondary-color);
+    color: var(--primary-background-color);             
+}
+
+.tag {
+    display: inline-block;
+    padding: 2px 9px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: 500;
+}
+/* Crop table */
+.crop-table-wrap {
+    overflow-x: auto;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+}
+table.crop-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+}
+.crop-table thead tr {
+    background: var(--secondary-background-color);
+    color: var(--primary-color);
+}
+.crop-table th {
+    padding: 12px 16px;
+    text-align: left;
+    font-weight: 500;
+    font-size: 13px;
+    letter-spacing: .04em;
+    white-space: nowrap;
+    cursor: pointer;
+    user-select: none;
+}
+.crop-table th:hover { background: #1e3a6e; }
+.crop-table th .sort-icon { opacity: .4; margin-left: 4px; }
+.crop-table th.sorted .sort-icon { opacity: 1; }
+.crop-table tbody tr {
+    border-bottom: 1px solid var(--border);
+    transition: background .1s;
+}
+.crop-table tbody tr:last-child { border-bottom: none; }
+.crop-table tbody tr:hover { background: var(--row-hover); }
+.crop-table td {
+    padding: 11px 16px;
+    color: var(--primary-text-color);
+    vertical-align: middle;
+}
+.crop-table td:first-child {
+    font-weight: 600;
+    color: var(--secondary-background-color);
+}
+
+.no-results {
+    text-align: center;
+    padding: 40px 20px;
+    color: var(--secondary-hover-color);
+    font-style: italic;
+}
+
+/* Placeholder sections */
+.placeholder-section {
+    margin-top: 12px;
+    padding: 28px;
+    border: 1.5px dashed var(--border);
+    border-radius: 12px;
+    color: #aaa;
+    font-size: 13px;
+    text-align: center;
+}

@@ -1,4 +1,4 @@
-<!-- Garden beds set-up and agrivoltaic setup -->
+<!-- Garden beds set-up and agrivoltaic setup, soil stats -->
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -12,46 +12,45 @@
     <header>
         <div class="logo"><img src="/TigerMountain-SOP/assets/logo.png" class="logo-size"><h1>TigerMountain Foundation</h1></div>
     </header>
-    <nav>
-        <ul>
-            <li><a href="/TigerMountain-SOP/index.html">Home</a></li>
-            <li><a href="/TigerMountain-SOP/crops.html">Crop Information</a></li>
-            <li><a href="/TigerMountain-SOP/garden.html">Garden Guides</a></li>
-            <li><a href="/TigerMountain-SOP/planting.html">Planting Guides</a></li>
-            <li><a href="/TigerMountain-SOP/tech.html">Technology Guides</a></li>
-        </ul>
-    </nav>
     <main>
-        <div class="body-text">
-        <div class="mini-nav">
-            <a href="">Garden Bed Building</a><br>
-            <a href="">Working With Agrivoltaics</a><br>
+        <div class="breadcrumb"> 
+            <p>
+                <a href="index.html">Home</a> 
+                > Garden Guide
+            </p>
         </div>
-        <div class="sub-section">
-            <div id="">
-                <h4>Garden Bed Building</h4> 
-                    <p>This is how you irrigate. </p>
-                    <p>This is how you irrigate. </p>
-                    <p>This is how you irrigate. </p>
-                    <p>This is how you irrigate. </p>
-                    <p>This is how you irrigate. </p>
-                    <p>This is how you irrigate. </p>
-                    <p>This is how you irrigate. </p>
-                    <p>This is how you irrigate. </p>
+        <div class="row">
+            <div class="column left">
+                <nav>
+                    <a href="#beds">Garden Beds</a>
+                    <a href="#agri">Agrivoltaics</a>
+                </nav>
             </div>
-            <div id="">
-                <h4>Working With Agrivoltaics</h4>
-                    <p>This is how you cultivate soil. </p>
-                    <p>This is how you cultivate soil. </p>
-                    <p>This is how you cultivate soil. </p>
-                    <p>This is how you cultivate soil. </p>
-                    <p>This is how you cultivate soil. </p>
-                    <p>This is how you cultivate soil. </p>
-                    <p>This is how you cultivate soil. </p>
-                    <p>This is how you cultivate soil. </p>
+            <div class="column right">
+                <div class="wrap-topics">
+                    <div id="beds">
+                        <h2>Garden Beds</h2><br>
+                        <h3>How to Set up the Beds: </h3>
+                            <ul class="bullet-desc">
+                                <li>Raised beds (4x8 ft) with untreated lumber or masonry.</li>
+                                <li><strong>Soil mix:</strong> 40% compost, 40% topsoil, 20% perlite/vermiculite for aeration.</li>
+                                <li>Drip irrigation tubing installed 6"- 8" apart.</li>
+                                <li>Agrivoltaics frames aligned north-south for optimal shading. </li>
+                            </ul>
+                    </div>
+                    <div id="agri">
+                        <h2>Agrivoltaics</h2><br>
+                        <h3>How to Work on Agrivoltaics: </h3>
+                            <ul class="bullet-desc">
+                                <li>Install solar panels 6–8 ft above ground for dappled shading.</li>
+                                <li>Alternate open-sun and shaded beds for comparison (pilot: 2-bed setup). </li>
+                                <li>Sensors (soil moisture, pH, temperature, light) connected to Raspberry Pi/ESP32.</li>
+                                <li>Data feeds into app for irrigation scheduling & weekly PDF reports.</li>
+                            </ul>
+                    </div>
+                </div>
             </div>
-        </div>
-        </div>
+          </div>
     </main>
     <footer>
 
