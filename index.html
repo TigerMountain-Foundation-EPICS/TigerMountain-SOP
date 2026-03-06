@@ -1,51 +1,100 @@
 <!-- -->
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="/TigerMountain-SOP/style.css">
-        <title>TMF Standard Operating Procedure :: Home</title>
-        <meta name="description" content= "Welcome to the TMF Standard Operating Procedure">
-    </head>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>TMF Standard Operating Procedure</title>
+  <meta name="description" content="Welcome to the TigerMountain Foundation Standard Operating Procedure">
+</head>
 <body>
-    <header>
-        <div class="logo"><img src="/TigerMountain-SOP/assets/logo.png" class="logo-size"><h1>TigerMountain Foundation</h1></div>
-    </header>
-    <main id="home">
-        <div class="home-body-text">
-            <h3>Welcome Volunteers!</h3>
-            <p>This is the guide page for the TigerMountain Foundation WeeWee Belcher Garden of Tomorrow!</p>
-        </div>
-        <div class="button-grid">
-            <a href="tech.html" class="button button--color1">
-              <span class="button-icon">🖥️</span>
-                <h2>Technology Guides</h2>
-                <p>Learn about the garden's Raspberry Pi and Sensors</p>
-            </a>
-      
-            <a href="planting.html" class="button button--color2">
-              <span class="button-icon">🌱</span>
-                <h2>Planting Guides</h2>
-                <p>Learn about the garden's crop types, optimal stats, and crop rotations.</p>
-            </a>
-      
-            <a href="garden.html" class="button button--color2">
-              <span class="button-icon">🌿</span>
-              <h2>Garden Guides</h2>
-              <p>Learn about the garden's layout, tools, and maintenance practices.</p>
-            </a>
-      
-            <a href="about.html" class="button button--color1">
-              <span class="button-icon">🏡</span>
-              <h2>About the Garden</h2>
-              <p>Learn about the garden's history, mission, and community impact.</p>
-            </a>
-      
-          </div>
-    </main>
-    <footer>
 
-    </footer>
+<header>
+  <div class="logo">
+    <img src="assets/logo.png" class="logo-size" alt="TigerMountain Foundation logo">
+    <h1>TigerMountain Foundation</h1>
+  </div>
+</header>
+<nav class="home-nav-container">
+    <ul class="home-nav-links">
+        <li><a href="#hero">Welcome</a></li>
+        <li><a href="#location">Our Location</a></li>
+        <li><a href="#contributors">Team Contributors</a></li>
+    </ul>
+</nav>
+<div class="hero" id="hero">
+    <h2>Welcome, Volunteers!</h2>
+    <p>Your guide to the WeeWee Belcher Garden of Tomorrow. Pick a section below to get started.</p>
+</div>
+
+<div class="button-grid">
+  <a href="tech.html" class="button">
+    <h2>RaspberryPi &amp; Sensors</h2>
+    <p>Setup, troubleshooting, and sensor guides.</p>
+  </a>
+  <a href="agri.html" class="button">
+    <h2>Agrivoltaic Guide</h2>
+    <p>Solar panel integration and shading management.</p>
+  </a>
+  <a href="hydro.html" class="button">
+    <h2>Hydroponic Guide</h2>
+    <p>Hydroponic system setup and maintenance.</p>
+  </a>
+  <a href="garden.html" class="button">
+    <h2>Garden Guide</h2>
+    <p>Crop types, rotations, watering schedules and more.</p>
+  </a>
+</div>
+<section id="location">
+    <h2>Our Location</h2>
+    <h3>1801 East Broadway Rd. Phoenix, AZ 85040</h3>
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3265.6260909668763!2d-112.04587492452067!3d33.40555345160076!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872b0fd4ea9d5f4f%3A0x6013bb276777a501!2s1801%20E%20Broadway%20Rd%2C%20Phoenix%2C%20AZ%2085040!5e1!3m2!1sen!2sus!4v1772155290285!5m2!1sen!2sus"
+      allowfullscreen loading="lazy" title="TigerMountain Foundation map"></iframe>
+  </section>
+  
+  <section id="contributors">
+    <h2>Contributors</h2>
+    <h3 style="font-weight:400;color:var(--muted);margin-top:.25rem;">ASU EPICS Team</h3>
+    <div class="contributors-grid">
+      <div class="contributor-card">
+        <img src="assets/kristal_hs.png" class="circle-img" alt="Kristal">
+        <span class="contributor-name">Kristal</span>
+      </div>
+      <div class="contributor-card">
+        <img src="assets/avy_hs.png" class="circle-img" alt="Avy">
+        <span class="contributor-name">Avy</span>
+      </div>
+      <div class="contributor-card">
+        <img src="assets/lynn_hs.png" class="circle-img" alt="Lynn">
+        <span class="contributor-name">Lynn</span>
+      </div>
+      <div class="contributor-card">
+        <img src="assets/natalia_hs.jpg" class="circle-img" alt="Natalia">
+        <span class="contributor-name">Natalia</span>
+      </div>
+      <div class="contributor-card">
+        <img src="assets/shrehan_hs.png" class="circle-img" alt="Shrehan">
+        <span class="contributor-name">Shrehan</span>
+      </div>
+      <div class="contributor-card">
+        <img src="assets/shrehan_hs.png" class="circle-img" alt="Shrehan">
+        <span class="contributor-name">Aamuktha</span>
+      </div>
+    </div>
+  </section>
+
+<footer>
+  <div id="footer">
+    <a href="index.html">Home</a>
+    <a href="tech.html">Raspberry Pi & Sensors</a>
+    <a href="agri.html">Agrivoltaic Guides</a>
+    <a href="hydro.html">Hydroponic Guides</a>
+    <a href="garden.html">Garden Guides</a>
+
+  </div>
+</footer>
+
 </body>
 </html>

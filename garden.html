@@ -1,59 +1,108 @@
-<!-- Garden beds set-up and agrivoltaic setup, soil stats -->
+<!-- Planting guide -->
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="/TigerMountain-SOP/style.css">
-        <title>TMF Standard Operating Procedure :: Home</title>
-        <meta name="description" content= "Welcome to the TMF Standard Operating Procedure">
-    </head>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>TMF SOP :: Planting Guide</title>
+  <meta name="description" content="TMF Planting Guide for the Standard Operating Procedure">
+</head>
 <body>
-    <header>
-        <div class="logo"><img src="/TigerMountain-SOP/assets/logo.png" class="logo-size"><h1>TigerMountain Foundation</h1></div>
-    </header>
-    <main>
-        <div class="breadcrumb"> 
-            <p>
-                <a href="index.html">Home</a> 
-                > Garden Guide
-            </p>
-        </div>
-        <div class="row">
-            <div class="column left">
-                <nav>
-                    <a href="#beds">Garden Beds</a>
-                    <a href="#agri">Agrivoltaics</a>
-                </nav>
-            </div>
-            <div class="column right">
-                <div class="wrap-topics">
-                    <div id="beds">
-                        <h2>Garden Beds</h2><br>
-                        <h3>How to Set up the Beds: </h3>
-                            <ul class="bullet-desc">
-                                <li>Raised beds (4x8 ft) with untreated lumber or masonry.</li>
-                                <li><strong>Soil mix:</strong> 40% compost, 40% topsoil, 20% perlite/vermiculite for aeration.</li>
-                                <li>Drip irrigation tubing installed 6"- 8" apart.</li>
-                                <li>Agrivoltaics frames aligned north-south for optimal shading. </li>
-                            </ul>
-                    </div>
-                    <div id="agri">
-                        <h2>Agrivoltaics</h2><br>
-                        <h3>How to Work on Agrivoltaics: </h3>
-                            <ul class="bullet-desc">
-                                <li>Install solar panels 6–8 ft above ground for dappled shading.</li>
-                                <li>Alternate open-sun and shaded beds for comparison (pilot: 2-bed setup). </li>
-                                <li>Sensors (soil moisture, pH, temperature, light) connected to Raspberry Pi/ESP32.</li>
-                                <li>Data feeds into app for irrigation scheduling & weekly PDF reports.</li>
-                            </ul>
-                    </div>
-                </div>
-            </div>
-          </div>
-    </main>
-    <footer>
 
-    </footer>
+<header>
+  <div class="logo">
+    <img src="assets/logo.png" class="logo-size" alt="TigerMountain Foundation logo">
+    <h1>TigerMountain Foundation</h1>
+  </div>
+</header>
+
+<div class="breadcrumb">
+  <p><a href="index.html">Home</a> &rsaquo; Garden Guide</p>
+</div>
+
+<div class="planting-shell">
+
+  <aside class="sidebar">
+    <nav>
+      <a href="#garden-crops">Crop Stats</a>
+      <a href="#rotations">Crop Rotations</a>
+      <a href="#irrigation">Irrigation</a>
+    </nav>
+  </aside>
+
+  <div class="content-area">
+
+    <section id="garden-crops">
+      <h2 class="section-heading">Garden Crop Stats</h2>
+      <div class="toolbar">
+        <div class="search-wrap">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+          </svg>
+          <input type="text" id="cropSearch" placeholder="Search crops…" autocomplete="off">
+        </div>
+        <div class="filter-pills" id="filterPills">
+          <button class="pill active" data-filter="all">All</button>
+          <button class="pill" data-filter="Leafy Greens">Leafy Greens</button>
+          <button class="pill" data-filter="Vegetables">Vegetables</button>
+        </div>
+      </div>
+      <div class="crop-table-wrap">
+        <table class="crop-table" id="cropTable">
+          <thead>
+            <tr>
+              <th data-col="name">Crop <span class="sort-icon">↕</span></th>
+              <th data-col="category">Type <span class="sort-icon">↕</span></th>
+              <th data-col="water">Watering <span class="sort-icon">↕</span></th>
+              <th data-col="ph">pH <span class="sort-icon">↕</span></th>
+              <th data-col="sunlight">Sunlight <span class="sort-icon">↕</span></th>
+              <th data-col="temp">Temp <span class="sort-icon">↕</span></th>
+            </tr>
+          </thead>
+          <tbody id="cropBody"></tbody>
+        </table>
+        <div class="no-results" id="noResults" style="display:none;">No crops match your search.</div>
+      </div>
+    </section>
+
+    <section id="rotations">
+      <h2 class="section-heading">Crop Rotation</h2>
+      <p style="margin-bottom:1rem;">To maintain soil nutrients &amp; reduce pests, rotate the following beds annually:</p>
+      <div class="nested-bullet">
+        <strong>Bed A — Leafy Greens → Legumes → Root Crops</strong>
+        <ul class="bullet-desc">
+          <li><strong>Year 1:</strong> Kale, lettuce</li>
+          <li><strong>Year 2:</strong> Beans / peas (nitrogen fixers)</li>
+          <li><strong>Year 3:</strong> Carrots, beets</li>
+        </ul>
+        <br>
+        <strong>Bed B — Fruiting Crops → Herbs → Cover Crop</strong>
+        <ul class="bullet-desc">
+          <li><strong>Year 1:</strong> Tomatoes, peppers</li>
+          <li><strong>Year 2:</strong> Basil, cilantro</li>
+          <li><strong>Year 3:</strong> Cover crop (clover) for nitrogen enrichment</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="irrigation">
+      <h2 class="section-heading">Irrigation Process</h2>
+      <p>Irrigation schedule content coming soon.</p>
+    </section>
+
+  </div>
+</div>
+
+<footer>
+  <div id="footer">
+    <a href="index.html">Home</a>
+    <a href="#garden-crops">Crop Stats</a>
+    <a href="#rotations">Crop Rotations</a>
+    <a href="#irrigation">Irrigation</a>
+  </div>
+</footer>
+
+<script src="planting.js"></script>
 </body>
 </html>
