@@ -25,29 +25,43 @@
 
   <aside class="sidebar">
     <nav>
+      <a href="index.html" class="side-home">Home</a>
       <a href="#system">System Overview</a>
-      <a href="#agri">Maintainance</a>
+      <a href="#maintain">Maintainance</a>
+      <a href="#solar">Maintainance</a>
     </nav>
   </aside>
 
   <div class="content-area">
     <section id="system">
       <h2 class="section-heading">System Overview</h2>
-      <p>Image and desc of agrivolatics...</p>
+      <p>Each garden bed is 2ft Height, 4ft Wide, and 8ft in Length. On-top is a solar panel, angled about 10°.</p>
+        <div  class="model-img">
+          <img src="assets/power_site.png" alt="Agri On-Site">
+        </div>  
     </section>
 
-    <section id="agri">
+    <section id="maintain">
       <h2 class="section-heading">Maintainance</h2>
-      <h3>How to Work on Agrivoltaics:</h3>
-      <ul class="bullet-desc" style="margin-top:.75rem;">
-        <li>Install solar panels 6–8 ft above ground for dappled shading.</li>
-        <li>Alternate open-sun and shaded beds for comparison (pilot: 2-bed setup).</li>
-        <li>Sensors (soil moisture, pH, temperature, light) connected to Raspberry Pi / ESP32.</li>
-        <li>Data feeds into app for irrigation scheduling &amp; weekly PDF reports.</li>
+
+      <div class="model-img">
+        <img src="assets/agri_model.png" alt="Agrivoltaic setup diagram">
+      </div>
+
+      <h3>Agrivoltaic Set-Up:</h3>
+      <ul class="bullet-desc">
+        <li></li>
       </ul>
-      <p>Attatch PDF Guide here.</p>
     </section>
 
+    <section id="solar">
+      <h2 class="section-heading">Solar Panel Maintenance</h2>
+      <ul class="bullet-desc">
+        <li>The panels are Hyperion solar panels, 44” wide and 68” long.</li>
+        <p><a href="https://es-media-prod.s3.amazonaws.com/media/components/panels/spec-sheets/TITAN_-_HYPERION_Panel_v3_2.pdf">View more about Hyperion Panels</a></p></br>
+        <li>The panel is about 400 watt panel and can power 2 batteries. A singular panel will charge 2 batteries in about 4 hours.</li>
+      </ul>
+    </section>
   </div>
 </div>
 
