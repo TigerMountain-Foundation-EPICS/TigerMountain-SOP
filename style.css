@@ -90,6 +90,14 @@ li { color: var(--muted); padding-bottom: .4rem; }
 a { color: var(--orange); text-decoration: none; }
 a:hover { color: #c45a10; }
 
+iframe {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border: none;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+} 
+
 /* ── Header ── */
 header {
   background: linear-gradient(135deg, var(--navy) 0%, #1e3d6e 100%);
